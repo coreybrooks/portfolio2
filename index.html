@@ -144,7 +144,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Kanban Inventory</h4>
-                        <p class="text-muted">Full stack application that can be used as a SaaS solution</p>
+                        <p class="text-muted" style="text-align: justify">Full stack application that can be used as a SaaS solution</p>
                         <p class="text-muted">...wow!</p>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Reddit React</h4>
-                        <p class="text-muted">Full MERN stack Reddit style application where users can make posts</p>
+                        <p class="text-muted" style="text-align: justify">Full MERN stack Reddit style application where users can make posts</p>
                         <p class="text-muted">...dang! that's cool</p>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Texas Beer Wars</h4>
-                        <p class="text-muted">Full stack application users can play to find their favorite texan beer</p>
+                        <p class="text-muted" style="text-align: justify">Full stack application users can play to find their favorite texan beer</p>
                         <p class="text-muted">...now we're talkin'!!</p>
                     </div>
                 </div>
@@ -189,8 +189,8 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>React NYT Searcher</h4>
-                        <p class="text-muted">React and Mongoose Project that interacts with the NYT API</p>
-                        <p class="text-muted">cool, uh.. nice name</p>
+                        <p class="text-muted" style="text-align: justify">React and Mongoose Project that queries data from the NYT API</p>
+                        <p class="text-muted">...cool, uh.. nice name</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -200,12 +200,12 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/friend-finder.jpg" class="img-responsive" alt="friend-finder">
+                        <img src="img/portfolio/news-scraper.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Friend Finder</h4>
-                        <p class="text-muted">Full stack application similar to a dating app to help find friends</p>
-                        <p class="text-muted">...ahhh</p>
+                        <h4>Cheerio News Scraper</h4>
+                        <p class="text-muted" style="text-align: justify">Web scraping application that fetches the latest news from Rawstory</p>
+                        <p class="text-muted">...yummy!</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -215,11 +215,12 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/news-scraper.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/friend-finder.jpg" class="img-responsive" alt="friend-finder">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Cheerio News Scraper</h4>
-                        <p class="text-muted">Web scraping application</p>
+                        <h4>Friend Finder</h4>
+                        <p class="text-muted" style="text-align: justify">Full stack application similar to a dating app to help find friends</p>
+                        <p class="text-muted">...ahhh</p>
                     </div>
                 </div>
             </div>
@@ -341,7 +342,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Me</h2>
-                    <h3 class="section-subheading text-muted" style='color: white'">Let's do this!!  I want to hear about your development needs</h3>
+                    <h3 class="section-subheading text-muted" style='color: white'>Let's do this!!  I want to hear about your development needs</h3>
                 </div>
             </div>
             <div class="row">
@@ -457,12 +458,35 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <h2>Reddit React</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="item-intro text-muted" style="text-align: justify">This is a Reddit style application that allows users to make posts about topics of their choosing.  They can also create new categories and leave comments about existing posts.   This is a full MERN Stack application.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/reddit-react.jpg" alt="">
-                                <p>This is a Reddit style application that allows users to make posts about topics of their choosing.  Users can also create new categories and leave comments about existing posts.  This is a full MERN Stack application.<br><br> 
-                                A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/react-reddit-project">GitHub repo</a></p>
-                                <p>
-                                <p>Visit the live application <a href="https://coreys-reddit-react-project.herokuapp.com/">here</a></p>
+                                <h4>Routing</h4>
+                                <h5 style="text-align: left">Express Routes</h5>
+                                  <p style="text-align: left">The following requests are routed with Express and Node.js: 
+                                    <ul style="text-align: justify">
+                                        <li>”/by-subreddit/:subreddit” GET route retrieves the saved documents from the posts collection in MongoDB using Mongoose.  The saved documents are returned to the Main component where they are dynamically rendered into the Listing component.</li>
+                                        <li>”/by-subreddit/:subreddit” POST route saves the new post into MongoDB.</li>
+                                        <li>”/categories” GET route returns only unique post titles to be rendered in the categories section on the Main component.</li>
+                                        <li>”comments/:subreddit/:title” GET route is called when the Comments component is mounted in order to retrieve and render the existing comments for each post.</li>
+                                    </ul>
+                                  </p>    
+                                <h5 style="text-align: left">React Routes</h5>
+                                  <p style="text-align: left">The following paths are routed using the React router methodology:
+                                    <ul style="text-align: justify">
+                                      <li>“/add” renders the CategoryForm component as a child of the Main component to add new categories when the "Add New Category" link is selected.</li>
+                                      <li>”/listing/:subredditId” renders the Listing component as a child of the Main component when a category is selected.  The Listing component displays the current posts for the given category, and renders the Form component to add new posts to the category.</li>
+                                    </ul>
+                                  </p>
+                                <h4>Components</h4>
+                                <p style="text-align: left">
+                                  <ul style="text-align: justify">
+                                      <li>Main Component:  The Main component is the React parent component, it renders the CategoryForm, Listing, ListItems, and Form components as children.</li>
+                                      <li>Listing Component: The Listing component renders the ListItems and Form components as children.  The Listing component uses the ListItems component to dynamically render the unique post titles from MongoDB within a given category.   The post titles can be selected to render the Comment components.</li>
+                                      <li>Comment Component:  The Comment component renders the CommentItem and CommentForm components.  The Comment component uses the CommentItems component to dynamically render the comments for each post.  Users can leave new comments using the CommentForm component.</li>
+                                      <li>Header and Footer components are rendered on each page.</li>
+                                  </ul>
+                                </p>
+                                <p>Click <a href="https://coreys-reddit-react-project.herokuapp.com/">here</a> to  visit the live application</p> 
 
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -542,8 +566,8 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Portfolio Modal 6, 5 is below -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -575,8 +599,8 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -591,13 +615,15 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Cheerio News Scraper</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="item-intro text-muted" style="text-align: justify">Cheerio News Scraper aka Corey's News Scraper scrapes the latest news from Rawstory and generates the headlines and photos with a link to the full story. The user can create, view, and delete comments for each story.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/news-scraper.jpg" alt="">
-                                <p>This is a full stack application that utilizes Node.js, Express, MongoDB, Mongoose, Handlebars.js and Cheerio.  Node.js and Express are used to query and route data into the app and display the appropriate pages.  Cheerio is used to scrape the news data from Rawstory, and the data is stored in MongoDB using Mongoose.  The front-end HTML is displayed using Handlebars.js.  Users can both leave and delete comments for each article.<br><br>
+                                <p style="text-align: justify">This is a full stack application that utilizes Node.js, Express, MongoDB, Mongoose, Handlebars.js and Cheerio.<br><br>
+                                Node.js and Express are used to query and route data into the app and display the appropriate pages. Cheerio is used to scrape the data from Rawstory and the data is stored in MongoDB using Mongoose.<br><br>
+                                The front-end HTML is displayed using the Handlebars.js templating engine. Each document stored in the MongoDB collection is displayed on the page. The scraped articles are displayed in reverse order so that the new ones appear on top. Mongoose is set to only store unique items so that the database does not have to be dropped and reloaded every time the articles are refreshed. There is a link at the top of the main page to refresh the articles.<br><br>
+                                Once a comment has been left for a story, there is a button generated to view the previous comments. When the "view comments" button is clicked, a new page is routed for the story where the user can delete previous comments or leave new ones.<br><br></p>
 
-                                A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/mongoose-and-cheerios-news">GitHub repo</a><br><br>
                                 
-                                Visit the live application <a href="https://corey-news-scraper.herokuapp.com/">here</a>
+                                <p>Click <a href="https://corey-news-scraper.herokuapp.com/">here</a> to visit the live application
                                 </p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
