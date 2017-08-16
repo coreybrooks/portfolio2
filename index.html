@@ -428,12 +428,101 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Kanban Inventory</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/kanban-inventory.jpg" alt="">
-                                <p>This is an inventory application that can be used as a SaaS solution to save companies time and labor costs associated with conducting inventory counts using Kanban principles.  This application was built with MySQL, Sequelize, Express, Node.js, and React.<br><br>
-                                   A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/kanban-inventory">GitHub repo</a></p>
+                                <p class="item-intro text-muted" style="text-align: justify;">This application was built with MySQL, Sequelize, Express, Node.js, and React. This is an inventory application that can be used by any company that still uses pen-and-paper inventory systems. This application will save significant labor hours and costs for every inventory count, and it will greatly improve the learning curve for new employees.</p>
+                                <a href="https://corey-inventory-app.herokuapp.com/#/"><img class="img-responsive img-centered" src="img/portfolio/kanban-inventory.jpg" alt=""></a>
+                                <h3>Why the Need?</h3>
+                                <p style="text-align: justify">Companies with massive inventory requirements such as Walmart already use automatic barcoding inventory systems, and large warehouses can use inventory systems utilizing RFID tags. However, many large companies, such as restaurants, need to conduct daily inventory counts on every product. Domino's Pizza is a good example. They were recently named the largest pizza chain in American, and it is my understanding that every chain conducts daily inventory counts using pen and paper. One reason for this issue is the inconsistency of store layouts. If every store layout and product storage was exactly the same, creating a master inventory checklist would be easy. However, most Domino's franchisees lease or buy existing buildings to adapt for their businesses. This practice makes sense financially, but it also means that almost every store location is slightly different. This mean that in every location there are different storage rooms, office space, etc. This creates a logistical issue in creating a master inventory list that can be used by every chain store.<br><br>
+                                From a process engineering standpoint, any small inefficiency in the system adds up and over time can cost a significant portion of the labor margin. In addition to unique location layouts, there are other inefficiencies to the pen-and-paper inventory methodology. Employees conduct inventory counts in one of a few different ways:
+                                  <ol style="text-align: justify">
+                                    <li>Begin observing items in a location and search for the item on the list to mark the count, and attempt to count every item in a location before moving to the next location. The problem with this method is that items are typically listed alphabetically and the user must find them by scanning the list. This would only take a few seconds if the items were listed exactly as you would expect on a single page, but there is a learning curve to discerning the item names. For example, trash bags might be listed as "liner, trash 50 gal", and lists are typically longer than one page. Also, items are typically located in more than one area.</li>
+                                    <li>Move to a location and begin scanning the list to find all items in the location to mark the count. This method might save a little time because the employee conducting the inventory is typically more familiar with the location of the item within a location than the location of the item on the list. The problem with this method is that it still takes time to scan the list for each item, and it is easy to miss items which causes the employee to move back and forth between locations.</li>
+                                    <li>Some companies attempt to group items by location which is a better method. The problem with this method is that most locations are not the same. Even if every location made a unique segmented list specific to their location, most items are located in more than one place which causes the employee to sum the items together from multiple places on the list once completed. ** In addition, all three methods require calculations after the count is complete. The most advanced systems require data entry into an inventory system to calculate orders and compile data tracking. Less sophisticated systems require the employee to manually add items and calculate the order.</li>
+                                  </ol>
+                                </p>
+                                <h5 style="text-align: justify;">Common sense would suggest that the following would be the optimally efficient way to do an inventory check:</h5> 
+                                  <ul style="text-align: justify">
+                                    <li>Make only one trip around the store, stopping at each location only once</li>   
+                                    <li>Instantly know where to find an item on the list, and don't waste any time looking for items</li>
+                                    <li>Have a system that automatically sums the count</li>
+                                    <li>Have a system that automatically enters the data into the tracking system</li>
+                                    <li>Have a system that automatically places the order</li>
+                                  </ul><br>
+                                <p style="text-align: justify">
+                                <strong>Enter Kanban..</strong> What is Kanban? Here is an explanation from <a href="https://leankit.com/learn/kanban/what-is-kanban/">leankit:</a><br><br>
+                                Kanban is Japanese for “visual signal” or “card.” Toyota line-workers used a kanban (i.e., an actual card) to signal steps in their manufacturing process. The system’s highly visual nature allowed teams to communicate more easily on what work needed to be done and when. It also standardized cues and refined processes, which helped to reduce waste and maximize value.<br>
+                                It starts with your brain.<br>
+                                A picture is worth a thousand words for scientific reasons: The brain processes visual information 60,000 times faster than text. Forty percent of all nerve fibers connected to the brain are linked to the retina. Visual information comprises 90 percent of the data that comes to our brain, suggesting that our neurological pathways might even prefer pictorial displays over text.
+                                </p><hr>
+                                <p style="text-align: justify">
+                                Kanban has also been adapted to help with workflow for software development, but manufacturing is a good example of its benefits. Picture an assembly line full of workers that are prompted on how to switch tasks simply by seeing a certain color. For example, what if you could view a yellow card and instantly associate that color with a set of several pre-defined tasks: stop this, start that, get ready for that, this is what's next, etc. Our brains can associate the meaning behind visual signals much faster than reading text.
+                                </p>
+                                <h5 style="text-align: justify">This application uses Kanban principles to streamline the inventory process by using color-coding to help the brain process information faster</h5>
+                                <p style="text-align: justify">There are several inefficiencies this app solves:<br>
+                                  <ul style="text-align: justify">
+                                    <li>The time is takes to scan the inventory list to find the item</li>
+                                    <li>The method that is used to choose which item to check</li>
+                                    <li>The issue of having items stored in more than one location</li>
+                                    <li>The problem of moving back and forth between locations to find items</li>
+                                    <li>The time is takes to sum the data and calculate the order after the count is complete</li>
+                                  </ul>
+                                </p>  
+                                <h3>Instructions for users</h3>    
+                                  <ol style="text-align: justify">
+                                    <li>Log in or sign up with user credentials</li>
+                                    <li>Create inventory areas and assign colors</li>
+                                    <li>Create items and designate up to two areas. Items that are in more than two areas can be listed multiple times</li>
+                                    <li>Begin inventory:</li>
+                                      <ul style="text-align: justify">
+                                        <li>Move to an area and begin completing the inventory list by scanning for the color associated with the area and entering item totals</li>
+                                        <li>Enter the total for the item (in unit decimals) into the form position and move to the next form position with that color. Once a total is entered, the color for that form position changes to gray</li>
+                                        <li>Enter values for every form position with the same color before moving to the next location</li>
+                                      </ul>
+                                    <li>Once all forms positions are filled, or all colors have changed to gray, submit the inventory and create a PDF of the results if desired</li>  
+                                  </ol><br><br>
+
+                                <h2>Overview of code</h2> 
+                                <h3>Routing</h3>
+                                <h4 style="text-align: justify;">Express Routes</h4>
+                                <p style="text-align: justify">The following requests are routed with Express and Node.js. They are called using Axios:<br>
+                                <ul style="text-align: justify">
+                                  <li>”/api/signup” and "api/login" POST routes area used to authenticate the user</li>
+                                  <li>"/api/area" POST route for creating a new inventory area</li>
+                                  <li>”/api/area/:companyName” GET route is used to retrieve inventory areas from MySQL per company</li>
+                                  <li>"/api/areaColor/:companyName/:area" GET route is used to retrieve inventory area colors from MySQL per company</li>
+                                  <li>"/api/table/:companyName/:date" GET route for retrieving inventory per data from MySQL per company</li>
+                                  <li>"/api/item" POST route is used to create new items in MySQL per company</li>
+                                  <li>"/api/items/:companyName" GET route is used to retrieve items from MySQL per company</li>
+                                  <li>"/api/inventory" POST route is used to create an inventory count and results calculation per company using MySQL</li>
+                                  <li>"/api/items/:companyName/:itemId" DELETE route is used to delete an item from MySQL</li>
+                                  <li>"/logout" GET route redirects a user to the login page</li>
+                                </ul>
+                                </p>
+                                <h4 style="text-align: justify;">React Routes</h4>
+                                <p style="text-align: justify">The following paths are routed using the React router methodology:<br>
+                                <ul style="text-align: justify">  
+                                  <li>“/login” renders the LoginForm component as a child of the Main component</li>
+                                  <li>“/signup” renders the SignupForm component as a child of the Main component</li>
+                                  <li>“members/:companyName” renders the Member component as a child of the Main component</li>
+                                  <li>“inventory/:companyName” renders the Inventory component as a child of the Main component</li>
+                                  <li>“table/:companyName/:date” renders the ResultsTable component as a child of the Main component</li>
+                                </ul>
+                                </p>
+
+                                <h3>Components</h3>
                                 <p>
-                                <p>Visit the live application <a href="https://corey-inventory-app.herokuapp.com/">here</a></p>
+                                  <ul style="text-align: justify">
+                                    <li>The following units are broken into individual components and are self-explanatory: Header, HeaderBlank, HeaderCreate, HeaderTable, Footer, LoginForm, SignupForm</li>
+                                    <li>Member Component: The Member Component renders the following:</li>
+                                      <ol style="text-align: justify">
+                                        <li>NewAreaForm Component for creating new inventory areas and assigning colors</li>
+                                        <li>ItemForm Component for creating new items</li>
+                                        <li>AreaLegend Component to display the different areas and associated colors</li>
+                                      </ol>
+                                    <li>Inventory Component: renders the inventory information and dynamically creates the form for the inventory count</li>    
+                                    <li>ResultsTable Component: calculates the results of the inventory count and displays the results</li>
+                                  </ul>
+                                </p>
+                                <p>Click <a href="https://corey-inventory-app.herokuapp.com/">here</a> to visit the live application</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -459,7 +548,7 @@
                             <div class="modal-body">
                                 <h2>Reddit React</h2>
                                 <p class="item-intro text-muted" style="text-align: justify">This is a Reddit style application that allows users to make posts about topics of their choosing.  They can also create new categories and leave comments about existing posts.   This is a full MERN Stack application.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/reddit-react.jpg" alt="">
+                                <a href="https://coreys-reddit-react-project.herokuapp.com/"><img class="img-responsive img-centered" src="img/portfolio/reddit-react.jpg" alt=""></a>
                                 <h4>Routing</h4>
                                 <h5 style="text-align: left">Express Routes</h5>
                                   <p style="text-align: left">The following requests are routed with Express and Node.js: 
@@ -513,15 +602,12 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Texas Beer Wars</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/texas-beer-wars.jpg" alt="">
-                                <p>Texas Beer Wars is a full stack interactive web application. This app is designed to allow users to vote on their favorite beer in a battle to find the best native Texan beer.  This project was built using an MVC structure. The backend of this application incorporates Node.js and Express to route both get and post requests.  Mocha and Chai are used as a framework to test the Node.JS RESTful functionality.  The app data is stored in MySQL and JawsDB using a Sequelize ORM.<br><br>
+                                <p class="item-intro text-muted" style="text-align: justify">Texas Beer Wars is a full stack interactive web application created by Corey Brooks, Jeff Mensing, Toby Boyd and Karl Girling. This app is designed to allow users to vote on their favorite beer in a battle to find the best native Texan beer.</p>
+                                <a href="https://texas-beer-wars.herokuapp.com/"><img class="img-responsive img-centered" src="img/portfolio/texas-beer-wars.jpg" alt=""></a>
+                                <p style="text-align: justify">This project was built using an MVC structure. The backend of this application incorporates Node.js and Express to route both get and post requests. Mocha and Chai are used as a framework to test the Node.JS RESTful functionality. The beer choices and the user choice history are both stored in MySQL and JawsDB using a Sequelize ORM. After a user chooses a category, they are prompted to click on their favorite in a one-on-one battle until the ultimate winner for the category is chosen. The app sends a counter for the overall winner to the database to increase the win count for the winning beer. When the page is reset, the top five ranking beers are displayed. There is also a "beer api" link in the header where an array of JSON objects for every beer can be viewed including the updated rank counter.  The final product is deployed on Heroku and uses basic SEO strategies.<br><br>
+                                </p>
 
-                                A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/beer-ranker">GitHub repo</a><br><br>
-                                
-                                Visit the live application <a href="https://texas-beer-wars.herokuapp.com/">here</a>
-
-
+                                <p>Click <a href="https://texas-beer-wars.herokuapp.com/">here</a> to visit the live application
                                 </p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -548,14 +634,24 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>React NYT Searcher</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/NYT-react-searcher.jpg" alt="">
-                                <p>This is a full stack application that utilizes the complete MERN Stack.  AJAX requests through Axios are used to query the NYT API for news articles related to the search term within the specified beginning and ending years.  The React components are then rendered to display the search results and the articles saved by the user for later viewing.<br><br>
-
-                                A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/nyt-react-search">GitHub repo</a><br><br>
-                                
-                                Visit the live application <a href="https://coreys-nyt-api-react.herokuapp.com/">here</a>
-
+                                <p class="item-intro text-muted" style="text-align: justify;">This website is a complete MERN Stack application. The application queries the NYT API to search for news articles related to the search term within the specified beginning and ending years.</p>
+                                <a href="https://coreys-nyt-api-react.herokuapp.com/"><img class="img-responsive img-centered" src="img/portfolio/NYT-react-searcher.jpg" alt=""></a>
+                                <h4>Routing</h4>
+                                <p style="text-align: justify">The following request are routed with Express and Node.js for MongoDB communication.
+                                <ul style="text-align: justify">
+                                  <li>/api/save GET route retrieves the saved documents from the articles collection in MongoDB using Mongoose. The saved documents are returned the Main compent where they are dynamically rendered into the Results component.</li>
+                                  <li>/api/save POST route saves the selected article into the articles collection in MongoDB when the save button is clicked, which is then rendered into the Saved component.</li>
+                                  <li>/api/save DELETE route deletes the selected article from the articles collection when the delete button is clicked.</li>
+                                </ul>
+                                <h4>Components</h4>
+                                <p>
+                                  <ul style="text-align: justify">
+                                    <li>Main Component: The Main component is the React parent component, it contains the Search, Results, and Saved children components. The Results and Saved components are generated dynamically through {this.renderResults()} and {this.renderHistory()} respectively. The Main component runs the getHistory function when mounted to dynamically create the Saved component. The Results component is rendered when the search term is submitted in the Search component.</li>
+                                    <li>Search Component: The searchTerm, startYear, and endYear input sections in the form use a handleChange function to update the corresponding state variables as variables are entered. When the submit button is clicked, the state variables are returned as props to the Main component through the this.props.setTerms function. The Main function then uses the React helpers to send an API request to the NYT API using axios.</li>
+                                    <li>Saved Component: The saved component is a functional component that returns a div with the corresponding documents for each article, including a delete button.</li>
+                                  </ul>
+                                </p>
+                                <p>Click <a href="https://coreys-nyt-api-react.herokuapp.com/">here</a> to visit the live application
                                 </p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -582,14 +678,15 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Friend Finder</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/friend-finder.jpg" alt="">
-                                <p>Friend Finder is similar to a dating app.  This is a full stack application that utilizes RESTful methodology to set the HTML and API routes for posting and requesting data through Express and Node.JS.<br><br>
-
-                                A much more comprehensive README file is displayed in the <a href="https://github.com/coreybrooks/friend-finder">GitHub repo</a><br><br>
-                                
-                                Visit the live application <a href="https://corey-friend-finder.herokuapp.com/">here</a>
-</p>
+                                <p class="item-intro text-muted" style="text-align: justify;">Friend Finder is similar to a dating app. This is a full stack RESTful API application which sets the HTML and API routes for posting and requesting data through Express and Node.JS.</p>
+                                <a href="https://corey-friend-finder.herokuapp.com/"><img class="img-responsive img-centered" src="img/portfolio/friend-finder.jpg" alt=""></a>
+                                <p style="text-align: justify;">The application prompts the user to enter their name and link to their photo. It then asks the user to answer 10 survey questions using a scale from 1 to 5.<br><br>
+                                The application stores the user as a new "friend" in a JSON object and compares the answers from the existing friends to determine who is the best match. Each answer is compared with the existing friends' answers, and an absolute value of the data variance is calculated for each question and pushed to a variance array. The array is then summed to determine the total variance for each friend. The existing friend with the lowest score variance is the most compatible and returned as the best match. The best match's name and photo are then displayed in a modal.<br><br>
+                                The complete JSON object of existing friends can be viewed on the route api/friends. A link to the route is included on each page.
+                                </p>
+                                <p>                         
+                                Click <a href="https://corey-friend-finder.herokuapp.com/">here</a> to visit the live application
+                                </p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -616,7 +713,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Cheerio News Scraper</h2>
                                 <p class="item-intro text-muted" style="text-align: justify">Cheerio News Scraper aka Corey's News Scraper scrapes the latest news from Rawstory and generates the headlines and photos with a link to the full story. The user can create, view, and delete comments for each story.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/news-scraper.jpg" alt="">
+                                <a href="https://corey-news-scraper.herokuapp.com/"><img class="img-responsive img-centered" src="img/portfolio/news-scraper.jpg" alt=""></a>
                                 <p style="text-align: justify">This is a full stack application that utilizes Node.js, Express, MongoDB, Mongoose, Handlebars.js and Cheerio.<br><br>
                                 Node.js and Express are used to query and route data into the app and display the appropriate pages. Cheerio is used to scrape the data from Rawstory and the data is stored in MongoDB using Mongoose.<br><br>
                                 The front-end HTML is displayed using the Handlebars.js templating engine. Each document stored in the MongoDB collection is displayed on the page. The scraped articles are displayed in reverse order so that the new ones appear on top. Mongoose is set to only store unique items so that the database does not have to be dropped and reloaded every time the articles are refreshed. There is a link at the top of the main page to refresh the articles.<br><br>
